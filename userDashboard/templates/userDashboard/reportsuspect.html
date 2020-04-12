@@ -1,0 +1,92 @@
+{% extends 'userDashboard/base.html'%}
+
+{% block content %}
+
+<style> 
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .divider-text span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;   
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+    </style>
+    <div class=" container-fluid jumbotron"> 
+        <h1> Report Suspect </h1>
+     </div>
+    <div class="container">
+
+    <div class=" row">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">SUSPECT REPORT FORM </h4>
+        <p class="text-center">Fill in the form to report the suspect with relevant evidence</p>
+        
+        <form action ="" method="POST" >
+        {% csrf_token %}
+        {{rsForm}}
+
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+             </div>
+            <input name="" class="form-control" placeholder="Full name" type="text">
+        </div> 
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+             </div>
+            <input name="" class="form-control" placeholder="Location seen" type="email">
+        </div> 
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-phone"></i> </span>
+            </div>
+            
+            <input name="" class="form-control" placeholder="Suspect Phone Number if any" type="text">
+        </div> 
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-building"></i> </span>
+            </div>
+            <select class="form-control">
+                <option selected=""> Select Profession</option>
+                <option>Student</option>
+                <option>Lecturer</option>
+                <option>Other</option>
+            </select>
+        </div> 
+        <div class="form-group input-group">
+            <div class="input-group-prepend">
+                <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+            </div>
+            <input class="form-control" placeholder="Any Person(s) assocaited with" type="text">
+            <textarea class="form-control" name="comments" id="comments" rows="6" placeholder="Give us more details.."></textarea>
+        </div> 
+                                           
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary btn-block"> Report Suspect </button>
+        </div>     
+                                                                    
+    </form>
+    </article>
+    </div>
+    </div>  
+    <br><br>
+    <br><br>
+    </article>
+
+{% endblock content %}

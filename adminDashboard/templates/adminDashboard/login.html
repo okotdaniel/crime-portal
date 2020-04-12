@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Nu Crime portal admin Panel</title>
+        <link href="{% static 'adminDashboard/css/styles.css' %} " rel="stylesheet" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
+    </head>
+
+    <style>
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .divider-text span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;   
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+    </style>
+ 
+    <body class="bg-light ">
+        <div id="layoutAuthentication">
+            <div id="layoutAuthentication_content">
+                <main>
+                    <div class="container mt-5">
+                        <div class="row justify-content-center">
+                           <div class="container">
+                                  <div class=" row ">
+                                    <article class="card-body mt-5 mx-auto" style="max-width: 400px;">
+                                    
+                                        <h4 class="card-title mt-5 text-center">Admin Login</h4> 
+                                        {% csrf_token %}
+                                            <form>
+                                                <div class="form-group input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+                                                    </div>
+                                                    <input name="" class="form-control" placeholder="Username or Email" type="email">
+                                                </div> 
+                                                
+                                                <div class="form-group input-group">
+                                                    <div class="input-group-prepend">
+                                                        <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                                                    </div>
+                                                    <input class="form-control" placeholder="Password" type="password">
+                                                </div> 
+                                                                                    
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btn-primary btn-block"> Login  </button>
+                                                </div>                                                        
+                                            </form>
+                                    </article>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+            <div id="layoutAuthentication_footer">
+                <footer class="py-4 bg-light mt-auto">
+                    <div class="container-fluid">
+                        <div class="d-flex align-items-center justify-content-between small">
+                            <div class="text-muted">Copyright &copy; Made with &hearts; by daniel okot masembe </div>
+                            <div>
+                                <a href="#">Privacy Policy</a>
+                                <a href="{% url 'adminDashboard' %}">Dashboard </a>
+                                &middot;
+                                <a href="#">Terms &amp; Conditions</a>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

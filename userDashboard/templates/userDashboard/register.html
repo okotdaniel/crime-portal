@@ -1,0 +1,95 @@
+{% extends 'userDashboard/base.html' %}
+
+{% block content %}
+
+<style> 
+    .divider-text {
+        position: relative;
+        text-align: center;
+        margin-top: 15px;
+        margin-bottom: 15px;
+    }
+    .divider-text span {
+        padding: 7px;
+        font-size: 12px;
+        position: relative;   
+        z-index: 2;
+    }
+    .divider-text:after {
+        content: "";
+        position: absolute;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+        top: 55%;
+        left: 0;
+        z-index: 1;
+    }
+    </style>
+    <div class="container">
+
+    <div class=" row">
+    <article class="card-body mx-auto" style="max-width: 400px;">
+        <h4 class="card-title mt-3 text-center">Create Account</h4>
+        <p class="text-center">Get started with your free account</p>
+        <form action="" method="POST">
+            {% csrf_token %}
+           
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+               {{cuForm.username}}
+            </div> 
+           
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+                </div>
+                {{cuForm.email}}
+            </div> 
+
+            
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                {{cuForm.password1}}
+            </div> 
+
+            <div class="form-group input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+                </div>
+                {{cuForm.password2}}
+            </div>                
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary btn-block"> Create Account  </button>
+            </div>
+           <div class="danger ">
+             {{cuForm.errors}}   
+           </div>  
+            <p class="text-center">Have an account? <a href="{% url 'login' %}">Log In</a> </p>                                                                 
+    </form>
+<script>
+     var  form_fields = document.getElementsByTagName('input')
+        form_fields[1].placeholder ='User name';
+        form_fields[2].placeholder ='email';
+        form_fields[3].placeholder ='Enter Password';
+        form_fields[4].placeholder ='Repeat Password';
+
+        for( var field in form_fields ){
+            form_fields[field].className += 'form-control'
+        }
+
+ </script>
+    </article>
+    </div>
+    </div>  
+    <br><br>
+    <br><br>
+    </article>
+
+{% endblock content %}
+
+

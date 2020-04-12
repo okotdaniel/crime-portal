@@ -1,0 +1,161 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crime Portal </title>  
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="{% static 'userDashboard/images/logo_05.png' %}" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="{% static 'userDashboard/images/apple-touch-icon.png' %}">
+    <link rel="stylesheet" href="{% static 'userDashboard/css/bootstrap.min.css' %} ">
+    <link rel="stylesheet" href="{% static 'userDashboard/css/style.css' %} ">
+    <link rel="stylesheet" href="{% static 'userDashboard/css/versions.css' %}">
+    <link rel="stylesheet" href="{% static 'userDashboard/css/responsive.css' %}">
+    <link rel="stylesheet" href="{% static 'userDashboard/css/custom.css' %} ">
+    <script src="{% static 'userDashboard/js/modernizer.js' %} "></script>
+</head>
+<style>
+ .logo-nu{
+   height: 60px;
+   width: 60px;
+ }
+
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light font-large ">
+    <a class="navbar-brand" href="#"><img class="logo-nu" src="  {% static 'userDashboard/images/logo.jpg' %} "> Crime Portal</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarColor02">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'reportcrime' %}">Reprt Crime</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="{% url 'reportsuspect' %}">Reprt Suspect</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="{% url 'wanted' %}">Wanted List </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact' %}">contact</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="{% url 'tips' %}">Safety Tips</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="{% url 'register' %}">signup</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="{% url 'login' %}">login</a>
+        </li>
+        	<li class="nav-item">
+          <a class="nav-link" href="{% url 'administrator' %}">Admin</a>
+        </li>
+       
+      </ul>
+     
+    </div>
+  </nav>
+
+
+
+  
+
+	
+{% block content%}
+
+
+
+
+
+
+
+
+{% endblock content%}
+  <footer class=" page-footer font-small bg-light ">
+    
+    </div>
+    <div class="container text-center text-md-left mt-5">
+      <div class="row mt-3">
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+        <img class="logo-nu" src="  {% static 'userDashboard/images/logo.jpg' %} ">
+          <h6 class="text-uppercase font-weight-bold">Nkumba University Crime Portal</h6>
+          <hr class="green accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>Report Crime today and make nkumba University a better place to achieve dreams  </p>
+  
+        </div>
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Products</h6>
+          <hr class="green accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#!">Report Crime</a>
+          </p>
+          <p>
+            <a href="#!">Imporntant contacts</a>
+          </p>
+          <p>
+            <a href="#!">Crime  Review</a>
+          </p>
+  
+        </div>
+        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 class="text-uppercase font-weight-bold">Useful links</h6>
+          <hr class="green accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <a href="#">Your Account</a>
+          </p>
+          <p>
+            <a href="#">Wanted</a>
+          </p>
+          <p>
+            <a href="#">Announcements</a>
+          </p>
+         
+  
+        </div>
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="green accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fas fa-home mr-3"></i> Entebbe, Uganda</p>
+          <p>
+            <i class="fas fa-envelope mr-3"></i> info@crimeportal.com</p>
+          <p>
+            <i class="fas fa-phone mr-3"></i> + 256 757 076 371 </p>
+          <p>
+            <i class="fas fa-print mr-3"></i> + 256 757 076 371 </p>
+  
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      Proudly Made With &hearts; By Daniel Okot Masembe 
+    </div>
+  </footer>
+
+    <a href="#" id="scroll-to-top" class="dmtop global-radius"><i class="fa fa-angle-up"></i></a>
+    <script src="{% static 'userDashboard/js/all.js' %}"></script>
+    <script src="{% static 'userDashboard/js/custom.js' %}"></script>
+    <script src="{% static 'userDashboard/js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'userDashboard/js/timeline.min.js' %}"></script>
+	<script src="{% static 'userDashboard/js/jquery-2.2.4.min.js' %}"></script>
+	<script src="{% static 'userDashboard/js/r.js' %}"></script>
+	<script>
+		timeline(document.querySelectorAll('.timeline'), {
+			forceVerticalMode: 700,
+			mode: 'horizontal',
+			verticalStartPosition: 'left',
+			visibleItems: 4
+		});
+	</script>
+</body>
+</html>

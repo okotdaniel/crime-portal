@@ -1,0 +1,24 @@
+{% extends 'userDashboard/base.html'%}
+{% block content%}
+
+<div class="container-fluid">
+    <div class="row   center jumbotron"> 
+     <h1> Campus Safety Tips Repository </h1>
+     </div>
+ </div> 
+
+ {% for i in tipsList %}
+   <div class="container-fluid row ">
+         <div class="mr-5 ml-5  card-body">
+           <tr>  
+            <p> <h2> {{i.Title}} </h2>  </p>
+            <p> {{i.Details}} </p>
+            <p> {{i.DatePosted}} </p>
+            <p>Posted By:{{i.UserProfession}}  </p>
+       
+    </div>
+   </div>
+
+ {% endfor %}
+
+{% endblock content%}

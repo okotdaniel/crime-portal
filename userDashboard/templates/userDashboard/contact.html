@@ -1,0 +1,30 @@
+{% extends 'userDashboard/base.html' %}
+
+{% block content %}
+
+    {% for contact in contacts %}
+         <li> {{contact.names}} </li>
+    {% endfor %}
+    
+
+<div class="container-fluid">
+    <div class="row   jumbotron"> 
+        <h1> Contact US Here </h1>
+     </div>
+ </div> 
+ <div class="jumbotron container-fluid ">
+
+    {% for i in contactList %}
+        <p><h2> {{i.Names}} </h2></p>
+        <p> {{i.Phone}} </p>
+        <p> {{i.Comments}} </p>
+        <p> {{i.calling_hours}} </p>
+        <p> <h2> {{i.Profession}} </h2>  </p>
+        <p> {{i.Date_created}} </p>
+
+    {% endfor %}
+
+ </div>
+
+		
+{% endblock content%}
