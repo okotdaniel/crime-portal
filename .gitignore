@@ -10,7 +10,7 @@ def contactView(request):
         email = request.POST.get("name")
         title = request.POST.get("title")
         message = request.POST.get("message")
-
+        
         contactCapture = contactModel()
         contactCapture.email = email
         contactCapture.title = title
