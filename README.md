@@ -18,18 +18,15 @@ cd crime-portal
 ```
 install the necessary packages 
 
-```
-bash 
+``` 
 pip install requirements.txt
 ```
 After that the run the following command 
 ```
-bash 
 python manage.py runserver 
 ```
 Make migrations 
-```
-bash 
+``` 
 python manage.py makemigrations 
 python manage.py migrate 
 ```
