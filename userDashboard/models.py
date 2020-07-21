@@ -41,5 +41,22 @@ class reportSuspect(models.Model):
 
     def __str__(self):
         return self.suspect_Name
+        
+class wantedSuspect(models.Model):
+    genderList = (
+        ('male' ,  'male'),
+        ('female' , 'female')
+    )
 
+    name                =   models.CharField(max_length=200, null=True)
+    age                 =   models.CharField(max_length=200, null=True)
+    course              =   models.CharField(max_length=200, null=True)
+    #picture            =   models.ImageField(max_length=200, null=True)
+    Year_of_admission   =   models.CharField(max_length=200, null=True)
+    Intake              =   models.CharField(max_length=200, null=True)
+    Index_number        =   models.CharField(max_length=200, null=True)
+    sex                 =   models.CharField(choices = genderList, max_length=200)
+    DatePosted          =   models.DateTimeField(auto_now=True)
+    def __str__(self):
+        return self.name 
 

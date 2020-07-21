@@ -60,7 +60,11 @@ def reportsuspectView(request):
     return render(request, 'userDashboard/reportsuspect.html', context)
 
 def wantedView(request):
-    return render(request, 'userDashboard/wanted.html')
+    wanted_list = wantedSuspect.objects.all()
+    context = {
+        'wanted_list': wanted_list
+    }
+    return render(request, 'userDashboard/wanted.html', context)
     
 def tipsView(request):
 

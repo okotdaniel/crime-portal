@@ -7,13 +7,11 @@ the criminals
 
 The project can be cloned directly from my github repository 
 ``` 
-bash 
 git clone https://github.com/okotdaniel/crime-portal.git 
 ```
 # Usage
 
 ```
-bash 
 cd crime-portal
 ```
 install the necessary packages 

@@ -6,4 +6,28 @@
         <h1> Wanted List </h1>
      </div>
  </div> 
+
+ <div class="container">
+     <div class="row">
+         {% for w in wanted_list %}
+        <div class="col-sm-3">
+            <p>hello picture</p>
+        </div>
+         <div class="col">
+             <div class="card">
+                <p>Name: {{w.name}}</p>
+                <p>Age: {{w.age}}</p>
+                <p>Sex{{w.sex}}</p>
+                <p>Course {{w.course}}</p>
+                <p>Course {{w.course_id}}</p>
+                
+            </div>
+           
+                <button class="btn btn-primary">Report</button>
+            
+         </div>
+        
+        {% endfor %}
+     </div>
+ </div>
 {% endblock content%}
