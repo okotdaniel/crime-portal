@@ -33,7 +33,8 @@ def viewContactView(request):
     queryAllContacts = contacts.objects.all()
     totalQuery = queryAllContacts.count()
     context = {
-        'queryAllContacts':queryAllContacts,'totalQuery':totalQuery
+        'queryAllContacts':queryAllContacts,
+        'totalQuery':totalQuery
     }
     return render(request, 'adminDashboard/viewcontacts.html',context )
 
