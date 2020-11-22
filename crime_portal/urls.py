@@ -5,13 +5,14 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 urlpatterns = [
-    path('', include('userDashboard.urls')),
-    path('', include('userDashboard.urls')),
-    path('administrator/', include('adminDashboard.urls')),
+    path('', include('user.urls')),
+    path('administrator/', include('administrator.urls')),
     path('api-auth/', include('rest_framework.urls')),
     path('admin/', admin.site.urls),
-    path('api/', include('userDashboard.api.urls'))
+    
 ]
+
+#path('api/', include('user.api.urls'))
 
 
 if settings.DEBUG:

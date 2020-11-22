@@ -1,0 +1,42 @@
+{% extends 'user/base.html'%}
+{% block content%}
+
+<div class=" row ">
+    <div class=" jumbotron  "> 
+        <h1 class="text-center "> Wanted List </h1>
+     </div>
+ </div> 
+
+ <div class="container">
+     <div class="row">
+        {% for w in wanted_list %}
+        <div class="col-sm-3">
+            <p> <img src="{{w.picture.url}}" class="img-fluid"> </p>
+        </div>
+         <div class="col">
+             <div class="">
+                <p>Name: {{w.name}}</p>
+                <p>Age: {{w.age}}</p>
+                <p>Sex{{w.sex}}</p>
+                <p>Course {{w.course}}</p>
+                <p>Course {{w.course_id}}</p>
+                <p>Date of Birth  {{w.Dob}}</p>
+                
+            </div>
+           
+                <button class="btn btn-primary">View Details </button>
+            
+         </div>
+        {% endfor %}
+     </div>
+
+
+
+     
+ </div>
+
+
+
+
+
+{% endblock content%}

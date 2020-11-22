@@ -10,6 +10,13 @@
 @import url(css/font-awesome.min.css);
 
 
+.bannier{
+    background-image: url('../images/bannier.svg');
+    background-repeat: no-repeat;
+    width: 100%;
+    background-size: cover;
+
+}
 body {
     color: #333333;
     font-size: 15px;
