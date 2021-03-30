@@ -1,52 +1,5 @@
-.DS_Store/ 
+.DS_Store/
 .idea/
 .vscode/
+env-crime/
 
-
-from .models import contactModel
-def contactView(request):
-    
-    if request.method = "POST":
-        email = request.POST.get("name")
-        title = request.POST.get("title")
-        message = request.POST.get("message")
-        
-        contactCapture = contactModel()
-        contactCapture.email = email
-        contactCapture.title = title
-        contactCapture.message = message
-        contactCapture.save()
-        return redirect('/')
-
-    return render(request, 'index.html')
-
-from django.core.mail import send_mail
-from django.conf import settings
-
-def sendMail(request):
-    if request.method = "POST":
-        Subject = request.POST['Subject']
-        SenderEmail = request.POST['SenderEmail']
-        Mesage = request.POST['Message']
-
-        send_mail(
-            subject,
-            message,
-            from_email=SenderEmail,
-            recipient_list=settings.RECIPIENT_LIST,
-            fail_silently=False 
-        )
-
-        return pass
-
-settings.py
-
-#mail_ends
-email_host = "smtp.zoho.com"
-email_port = 587
-email_backend = 'django.core.email.backends.smtp.EmailBackend'
-
-
-#user ends
-email_host_user or_recipient_list ="help@cranebrands.com"
-email_password ='password'
